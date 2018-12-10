@@ -720,3 +720,410 @@ Migrating to CreateUsers (20181206091106)
   ↳ bin/rails:9
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started POST "/login" for 192.168.50.32 at 2018-12-10 15:52:07 +0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Kevin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as */*
+  Parameters: {"code"=>"022nyuSj1zJbNm0TI3Rj11kiSj1nyuSO", "login"=>{"code"=>"022nyuSj1zJbNm0TI3Rj11kiSj1nyuSO"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."open_id" = $1 LIMIT $2[0m  [["open_id", "oeGvi5GagIoofCrp-v-ZY-gX6J60"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:17
+Completed 200 OK in 565ms (Views: 0.4ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/api/v1/galleries" for 192.168.50.32 at 2018-12-10 15:52:15 +0800
+Processing by Api::V1::GalleriesController#index as JSON
+  Parameters: {"gallery"=>{}}
+  [1m[36mGallery Load (9.5ms)[0m  [1m[34mSELECT "galleries".* FROM "galleries"[0m
+  ↳ app/controllers/api/v1/galleries_controller.rb:5
+Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/login" for 192.168.50.32 at 2018-12-10 16:02:57 +0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Kevin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as */*
+  Parameters: {"code"=>"0221ZOGp0WmeNm1IwKHp04BUGp01ZOGP", "login"=>{"code"=>"0221ZOGp0WmeNm1IwKHp04BUGp01ZOGP"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."open_id" = $1 LIMIT $2[0m  [["open_id", "oeGvi5GagIoofCrp-v-ZY-gX6J60"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:17
+Completed 200 OK in 623ms (Views: 0.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/api/v1/galleries" for 192.168.50.32 at 2018-12-10 16:03:01 +0800
+Processing by Api::V1::GalleriesController#index as JSON
+  Parameters: {"gallery"=>{}}
+  [1m[36mGallery Load (0.7ms)[0m  [1m[34mSELECT "galleries".* FROM "galleries"[0m
+  ↳ app/controllers/api/v1/galleries_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 3.5ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (126.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "authentication-rails_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (130.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "authentication-rails_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (792.4ms)[0m  [1m[35mCREATE DATABASE "authentication-rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (733.6ms)[0m  [1m[35mCREATE DATABASE "authentication-rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2759838482003932140)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateArts (20181205054052)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "arts" ("id" bigserial primary key, "title" character varying DEFAULT 'Title unavailable', "description" character varying DEFAULT 'Dscription currently unavailable', "photo" character varying DEFAULT '', "artist_name" character varying DEFAULT 'Author currently unavailable', "gallery_id" integer DEFAULT 0, "featured" boolean DEFAULT FALSE, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181205054052_create_arts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181205054052"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateGalleries (20181206005640)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "galleries" ("id" bigserial primary key, "name" character varying, "description" character varying, "photo" character varying, "address" character varying, "phone_number" character varying, "website_url" character varying, "locked" boolean DEFAULT FALSE, "pin" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181206005640_create_galleries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181206005640"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20181206091106)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "open_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181206091106_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181206091106"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-10 08:06:17.442237"], ["updated_at", "2018-12-10 08:06:17.442237"]]
+  ↳ bin/rails:9
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2759838482003932140)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/login" for 192.168.50.32 at 2018-12-10 16:06:26 +0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Kevin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as */*
+  Parameters: {"code"=>"012D1gHr1lRnDl07jXHr1i6oHr1D1gH4", "login"=>{"code"=>"012D1gHr1lRnDl07jXHr1i6oHr1D1gH4"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."open_id" = $1 LIMIT $2[0m  [["open_id", "oeGvi5GagIoofCrp-v-ZY-gX6J60"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/login_controller.rb:17
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("open_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["open_id", "oeGvi5GagIoofCrp-v-ZY-gX6J60"], ["created_at", "2018-12-10 08:06:27.305995"], ["updated_at", "2018-12-10 08:06:27.305995"]]
+  ↳ app/controllers/login_controller.rb:17
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/login_controller.rb:17
+Completed 200 OK in 684ms (Views: 0.4ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/api/v1/galleries" for 192.168.50.32 at 2018-12-10 16:06:29 +0800
+Processing by Api::V1::GalleriesController#index as JSON
+  Parameters: {"gallery"=>{}}
+  [1m[36mGallery Load (1.1ms)[0m  [1m[34mSELECT "galleries".* FROM "galleries"[0m
+  ↳ app/controllers/api/v1/galleries_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 4.5ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (1.5ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Galleria de Paradiso"], ["description", "Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."], ["photo", "https://images.unsplash.com/photo-1505416795390-0beeb662b1f2"], ["address", "No. 1 Eden Boulevard 100001"], ["phone_number", "6469463"], ["created_at", "2018-12-10 08:06:58.402436"], ["updated_at", "2018-12-10 08:06:58.402436"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (0.6ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rossi & Rossi"], ["description", "Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."], ["photo", "https://images.unsplash.com/photo-1518997350705-0379564558ac"], ["address", "No. 9999 Nile Street 800601"], ["phone_number", "85039763"], ["created_at", "2018-12-10 08:06:58.411142"], ["updated_at", "2018-12-10 08:06:58.411142"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (0.5ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Wentworth Galleries"], ["description", "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod."], ["photo", "https://images.unsplash.com/photo-1501682942051-11186018abc5"], ["address", "No. 666 Fortune Alley 109001"], ["phone_number", "85039763"], ["created_at", "2018-12-10 08:06:58.415011"], ["updated_at", "2018-12-10 08:06:58.415011"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (127.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "authentication-rails_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (331.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "authentication-rails_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (528.8ms)[0m  [1m[35mCREATE DATABASE "authentication-rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (486.4ms)[0m  [1m[35mCREATE DATABASE "authentication-rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2759838482003932140)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateArts (20181205054052)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "arts" ("id" bigserial primary key, "title" character varying DEFAULT 'Title unavailable', "description" character varying DEFAULT 'Dscription currently unavailable', "photo" character varying DEFAULT '', "artist_name" character varying DEFAULT 'Author currently unavailable', "gallery_id" integer DEFAULT 0, "featured" boolean DEFAULT FALSE, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181205054052_create_arts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181205054052"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateGalleries (20181206005640)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "galleries" ("id" bigserial primary key, "name" character varying, "description" character varying, "photo" character varying, "address" character varying, "phone_number" character varying, "website_url" character varying, "locked" boolean DEFAULT FALSE, "pin" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181206005640_create_galleries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181206005640"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20181206091106)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "open_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181206091106_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181206091106"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-10 08:09:23.957847"], ["updated_at", "2018-12-10 08:09:23.957847"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2759838482003932140)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/login" for 192.168.50.32 at 2018-12-10 16:09:35 +0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Kevin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as */*
+  Parameters: {"code"=>"022cyGcJ0P8JDg24V6fJ0SWHcJ0cyGcX", "login"=>{"code"=>"022cyGcJ0P8JDg24V6fJ0SWHcJ0cyGcX"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."open_id" = $1 LIMIT $2[0m  [["open_id", "oeGvi5GagIoofCrp-v-ZY-gX6J60"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/login_controller.rb:17
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("open_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["open_id", "oeGvi5GagIoofCrp-v-ZY-gX6J60"], ["created_at", "2018-12-10 08:09:36.700367"], ["updated_at", "2018-12-10 08:09:36.700367"]]
+  ↳ app/controllers/login_controller.rb:17
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/login_controller.rb:17
+Completed 200 OK in 590ms (Views: 0.4ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/api/v1/galleries" for 192.168.50.32 at 2018-12-10 16:09:38 +0800
+Processing by Api::V1::GalleriesController#index as JSON
+  Parameters: {"gallery"=>{}}
+  [1m[36mGallery Load (0.7ms)[0m  [1m[34mSELECT "galleries".* FROM "galleries"[0m
+  ↳ app/controllers/api/v1/galleries_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 2.9ms)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (3854.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "authentication-rails_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (125.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "authentication-rails_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (530.6ms)[0m  [1m[35mCREATE DATABASE "authentication-rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (533.7ms)[0m  [1m[35mCREATE DATABASE "authentication-rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (123.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "authentication-rails_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (122.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "authentication-rails_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (493.9ms)[0m  [1m[35mCREATE DATABASE "authentication-rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (509.3ms)[0m  [1m[35mCREATE DATABASE "authentication-rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2759838482003932140)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateArts (20181205054052)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "arts" ("id" bigserial primary key, "title" character varying DEFAULT 'Title unavailable', "description" character varying DEFAULT 'Dscription currently unavailable', "photo" character varying DEFAULT '', "artist_name" character varying DEFAULT 'Author currently unavailable', "gallery_id" integer DEFAULT 0, "featured" boolean DEFAULT FALSE, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181205054052_create_arts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181205054052"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateGalleries (20181206005640)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "galleries" ("id" bigserial primary key, "name" character varying, "description" character varying, "photo" character varying, "address" character varying, "phone_number" character varying, "website_url" character varying, "locked" boolean DEFAULT FALSE, "pin" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181206005640_create_galleries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181206005640"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20181206091106)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "open_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181206091106_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181206091106"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-10 08:13:19.304281"], ["updated_at", "2018-12-10 08:13:19.304281"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2759838482003932140)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (1.9ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Galleria de Paradiso"], ["description", "Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."], ["photo", "https://images.unsplash.com/photo-1505416795390-0beeb662b1f2"], ["address", "No. 1 Eden Boulevard 100001"], ["phone_number", "6469463"], ["created_at", "2018-12-10 08:13:19.432273"], ["updated_at", "2018-12-10 08:13:19.432273"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (0.5ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rossi & Rossi"], ["description", "Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."], ["photo", "https://images.unsplash.com/photo-1518997350705-0379564558ac"], ["address", "No. 9999 Nile Street 800601"], ["phone_number", "85039763"], ["created_at", "2018-12-10 08:13:19.440475"], ["updated_at", "2018-12-10 08:13:19.440475"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (0.4ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Wentworth Galleries"], ["description", "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod."], ["photo", "https://images.unsplash.com/photo-1501682942051-11186018abc5"], ["address", "No. 666 Fortune Alley 109001"], ["phone_number", "85039763"], ["created_at", "2018-12-10 08:13:19.443813"], ["updated_at", "2018-12-10 08:13:19.443813"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (1.1ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Galleria de Paradiso"], ["description", "Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."], ["photo", "https://images.unsplash.com/photo-1505416795390-0beeb662b1f2"], ["address", "No. 1 Eden Boulevard 100001"], ["phone_number", "6469463"], ["created_at", "2018-12-10 08:13:58.577745"], ["updated_at", "2018-12-10 08:13:58.577745"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (0.5ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rossi & Rossi"], ["description", "Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."], ["photo", "https://images.unsplash.com/photo-1518997350705-0379564558ac"], ["address", "No. 9999 Nile Street 800601"], ["phone_number", "85039763"], ["created_at", "2018-12-10 08:13:58.583844"], ["updated_at", "2018-12-10 08:13:58.583844"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mGallery Create (0.6ms)[0m  [1m[32mINSERT INTO "galleries" ("name", "description", "photo", "address", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Wentworth Galleries"], ["description", "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod."], ["photo", "https://images.unsplash.com/photo-1501682942051-11186018abc5"], ["address", "No. 666 Fortune Alley 109001"], ["phone_number", "85039763"], ["created_at", "2018-12-10 08:13:58.587548"], ["updated_at", "2018-12-10 08:13:58.587548"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mArt Create (1.3ms)[0m  [1m[32mINSERT INTO "arts" ("title", "description", "photo", "gallery_id", "featured", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Sprinting Splendor"], ["description", "Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."], ["photo", "https://images.unsplash.com/photo-1515405295579-ba7b45403062"], ["gallery_id", 4], ["featured", true], ["created_at", "2018-12-10 08:13:58.613060"], ["updated_at", "2018-12-10 08:13:58.613060"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mArt Create (0.5ms)[0m  [1m[32mINSERT INTO "arts" ("title", "description", "photo", "gallery_id", "featured", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fuego de Aqua"], ["description", "Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."], ["photo", "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17"], ["gallery_id", 7], ["featured", true], ["created_at", "2018-12-10 08:13:58.618397"], ["updated_at", "2018-12-10 08:13:58.618397"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mArt Create (0.6ms)[0m  [1m[32mINSERT INTO "arts" ("title", "description", "photo", "gallery_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Vestibulum Magna Lorem"], ["description", "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."], ["photo", "https://images.unsplash.com/photo-1495311634818-eda6134b7542"], ["gallery_id", 6], ["created_at", "2018-12-10 08:13:58.622201"], ["updated_at", "2018-12-10 08:13:58.622201"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+Started POST "/login" for 192.168.50.32 at 2018-12-10 16:14:11 +0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Kevin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#login as */*
+  Parameters: {"code"=>"012jFX5e0QDaht1leL5e0vOW5e0jFX5d", "login"=>{"code"=>"012jFX5e0QDaht1leL5e0vOW5e0jFX5d"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."open_id" = $1 LIMIT $2[0m  [["open_id", "oeGvi5GagIoofCrp-v-ZY-gX6J60"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/login_controller.rb:17
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("open_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["open_id", "oeGvi5GagIoofCrp-v-ZY-gX6J60"], ["created_at", "2018-12-10 08:14:12.235607"], ["updated_at", "2018-12-10 08:14:12.235607"]]
+  ↳ app/controllers/login_controller.rb:17
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/login_controller.rb:17
+Completed 200 OK in 555ms (Views: 0.4ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/api/v1/galleries" for 192.168.50.32 at 2018-12-10 16:14:14 +0800
+Processing by Api::V1::GalleriesController#index as JSON
+  Parameters: {"gallery"=>{}}
+  [1m[36mGallery Load (0.7ms)[0m  [1m[34mSELECT "galleries".* FROM "galleries"[0m
+  ↳ app/controllers/api/v1/galleries_controller.rb:5
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 5.4ms)
+
+
